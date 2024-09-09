@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise-4 -nav bar</title>
+    <style>
+      @media only screen and (max-width: 455px) {
+        .nav-upper {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      /* variables */
+      :root {
+        --ist-color: blueviolet;
+        --sec-color: white;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        overflow: hidden;
+      }
+
+      .nav-bar {
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        box-shadow: 0px 1px 20px 0.1px rgba(0, 0, 0, 0.25);
+      }
+
+      .nav-upper {
+        height: 15vh;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--sec-color);
+        position: sticky;
+        top: 0px;
+      }
+
+      .right-nav-div {
+        padding: 1.5vw;
+        color: var(--ist-color);
+      }
+
+      .left-nav-list {
+        list-style: none;
+        display: inline-flex;
+        padding: 2.2vw 1vw;
+      }
+
+      .left-nav-list li {
+        margin-right: 20px;
+        font-size: 16.5px;
+      }
+
+      .left-nav-list li:hover {
+        text-decoration: underline;
+        position: relative;
+        bottom: 2px;
+        text-decoration-color:var(--ist-color);
+        text-decoration-thickness: 2px;
+      }
+
+      .login,
+      .signup {
+        border: 1px solid black;
+        text-decoration: none !important;
+        text-decoration-thickness: none;
+        background-color: var(--ist-color);
+        padding: 1.2vh 1vw;
+        color: var(--sec-color);
+        position: relative !important;
+        bottom: 1.3vh !important;
+        border-radius: 5px;
+      }
+      .login:active,
+      .signup:active {
+        outline: 5px solid rgb(199, 159, 199);
+      }
+
+      hr {
+        margin: 0;
+      }
+
+      .nav-lower {
+        background-color:var(--sec-color);
+        height: 7vh;
+        display: flex;
+        justify-content: space-between;
+      }
+      a {
+        padding: 1vw 2vw;
+        text-decoration: none;
+      }
+      .search {
+        padding: 1vw 3vw;
+      }
+      .lower-middle-span {
+        padding: 1vw 5vw;
+      }
+      span {
+        padding-inline: 1vw;
+        font-family: sans-serif;
+        font-weight: bolder;
+        color:var(--ist-color);
+      }
+      span:hover {
+        position: relative;
+        bottom: 2px;
+        text-decoration: underline;
+        text-decoration-thickness: 2px;
+      }
+      aside {
+        width: 20vw;
+        height: 78vh;
+        background-color: var(--sec-color);
+        overflow-y: scroll;
+      }
+      aside ul {
+        padding: 0vw 0vw 0vw 3vw;
+      }
+      aside li {
+        padding: 1.5vw;
+      }
+
+      main {
+        background-color: var(--white-color);
+        display: inline-flex;
+      }
+      article {
+        width: 80vw;
+        height: 78vh;
+        overflow-y: scroll;
+      }
+      p {
+        height: 10vh;
+      }
+      h1 {
+        padding: 1vw;
+      }
+    </style>
+  </head>
+  <body>
+    <head>
+      <nav class="nav-bar">
+        <div class="nav-upper">
+          <div class="right-nav-div">
+            <h2>&lt;/&gt; CodeWithSam</h2>
+          </div>
+          <div class="left-nav-div">
+            <ul class="left-nav-list">
+              <li>Home</li>
+              <li>Courses</li>
+              <li>Tutorial</li>
+              <li>Blogs</li>
+              <li>Notes</li>
+              <li>Contact</li>
+              <li>My Gear</li>
+              <li>Work With Us</li>
+              <li class="login">Log in</li>
+              <li class="signup">Sign up</li>
+            </ul>
+          </div>
+        </div>
+        <hr />
+        <div class="nav-lower">
+          <a href="#">Home</a>
+          <div class="lower-middle-span">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JS</span>
+            <span>C</span>
+            <span>C++</span>
+            <span>JAVA</span>
+            <span>PYTHON</span>
+            <span>PHP</span>
+            <span>REACT JS</span>
+          </div>
+          <a class="search" href="#">Search</a>
+        </div>
+      </nav>
+    </head>
+    <!-- nav bar complete here -->
+    <main>
+      <aside>
+        <ul>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+          <li>Lorem ipsum dolor sit amet.</li>
+        </ul>
+      </aside>
+      <article>
+        <h1>YOUR ARTICLE</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+          quidem molestiae expedita beatae. Repellendus sit voluptate quos
+          voluptates corporis eveniet earum sint dicta odio magnam?
+        </p>
+      </article>
+    </main>
+  </body>
+</html>
